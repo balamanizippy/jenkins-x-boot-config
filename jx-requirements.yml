@@ -7,10 +7,11 @@ cluster:
   gitName: github
   gitServer: https://github.com
   namespace: jx
-  provider: gke
+  provider: kubernetes
+  registry: gcr.io
 environments:
 - ingress:
-    domain: ""
+    domain: 1.2.3.4.nip.io
     externalDNS: false
     namespaceSubDomain: ""
     tls:
@@ -19,16 +20,16 @@ environments:
       production: false
   key: dev
 - ingress:
-    domain: ""
+    domain: 1.2.3.4.nip.io
     externalDNS: false
     namespaceSubDomain: ""
     tls:
-      email: ""
+      email: 1.2.3.4.nip.io
       enabled: false
       production: false
   key: staging
 - ingress:
-    domain: ""
+    domain: 1.2.3.4.nip.io
     externalDNS: false
     namespaceSubDomain: ""
     tls:
@@ -38,7 +39,7 @@ environments:
   key: production
 gitops: true
 ingress:
-  domain: ""
+  domain: 1.2.3.4.nip.io
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
